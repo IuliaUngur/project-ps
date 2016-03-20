@@ -1,1 +1,1 @@
-Project : CATAN : board game simulation 
+Project : board game simulation 
