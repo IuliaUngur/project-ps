@@ -1,0 +1,11 @@
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\bin\Debug\DeskBank.exe.config
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.csprojResolveAssemblyReference.cache
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.Properties.Resources.resources
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.csproj.GenerateResource.Cache
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.LoginForm.resources
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.EmployeeForm.resources
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\bin\Debug\DeskBank.exe
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\bin\Debug\DeskBank.pdb
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.exe
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.pdb
+D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.AdminForm.resources
