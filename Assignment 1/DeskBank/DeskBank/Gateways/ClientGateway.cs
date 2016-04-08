@@ -30,8 +30,14 @@ namespace DeskBank.Domain
                 Id = reader.GetInt32(0),
                 Name = reader.GetString(1),
                 PNC = reader.GetInt32(2),
-                Address = reader.GetString(3)
+                Address = reader.GetString(3),
+                Accounts = _GetAccounts(reader.GetInt32(0))
             };
+        }
+
+        private IEnumerable<ClientAccount> _GetAccounts(int ownerId)
+        {
+            return ClientAccount.Gateway.GetAll().Where(elem => elem.Owner.Id == ownerId);
         }
     }
 }

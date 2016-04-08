@@ -11,7 +11,7 @@ namespace DeskBank
         internal Employee Authorize(string user, string pass)
         {
             Employee emp =  Employee.Gateway.GetAll().FirstOrDefault(element => 
-                element.UserName == user &&
+                element.UserName == user && 
                 element.Password == pass
             );
             if (emp == null)

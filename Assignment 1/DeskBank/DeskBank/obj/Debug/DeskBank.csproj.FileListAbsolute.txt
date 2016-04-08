@@ -9,3 +9,18 @@ D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\Desk
 D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.exe
 D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.pdb
 D:\Iulia's Documents\Facultate\Faculta\Visual Studio 2013 Projects\DeskBank\DeskBank\obj\Debug\DeskBank.AdminForm.resources
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\DeskBank.exe.config
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.exe
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.pdb
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\DeskBank.exe
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\DeskBank.pdb
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.csprojResolveAssemblyReference.cache
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.AdminForm.resources
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.EmployeeForm.resources
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.LoginForm.resources
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.Properties.Resources.resources
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.csproj.GenerateResource.Cache
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\PostSharp.dll
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\PostSharp.xml
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\DeskBank.pssym
+C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.exe.postsharp

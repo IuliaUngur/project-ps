@@ -22,7 +22,7 @@ namespace DeskBank.Domain
             returned += "id = " + value.Id + ",";
             returned += "user_name = '" + value.UserName + "',";
             returned += "password = '" + value.Password + "',";
-            returned += "type = " + (int)value.Type;
+            returned += "type = " + Convert.ToInt32(value.Type);
             return returned;
         }
         protected override Employee GetObjectFromReader(MySqlDataReader reader)

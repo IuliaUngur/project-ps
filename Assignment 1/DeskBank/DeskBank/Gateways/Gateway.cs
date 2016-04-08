@@ -26,7 +26,7 @@ namespace DeskBank.Gateways
             _removeSqlId = "DELETE FROM " + _tableName + " WHERE id=%d";
             _getSqlId = "SELECT * FROM " + _tableName + " WHERE id=%d";
             _getSqlAll = "SELECT * FROM " + _tableName;
-            _updateSql = "UPDATE " + _tableName + " SET (%s) WHERE id = %d";
+            _updateSql = "UPDATE " + _tableName + " SET %s WHERE id = %d";
         }
 
         private MySqlConnection GetConnection()
@@ -77,7 +77,7 @@ namespace DeskBank.Gateways
         }
         public T Get(int id)
         {
-            T returned;
+            T returned = default(T);
 
             using (MySqlConnection conn = this.GetConnection())
             {
@@ -86,8 +86,8 @@ namespace DeskBank.Gateways
                 {
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
-                        reader.NextResult();
-                        returned = GetObjectFromReader(reader); 
+                        if(reader.Read())
+                            returned = GetObjectFromReader(reader); 
                     }
                 }
                 conn.Close();
@@ -115,5 +115,47 @@ namespace DeskBank.Gateways
 
             return returned;
         }
+
+        public List<T> GetAllNoCycle()
+        {
+            List<T> returned = new List<T>();
+            using (MySqlConnection conn = this.GetConnection())
+            {
+                conn.Open();
+                using (MySqlCommand command = new MySqlCommand(_getSqlAll, conn))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                            returned.Add(GetObjectFromReader(reader));
+                    }
+                }
+                conn.Close();
+            }
+
+            return returned;
+        }
+
+        public T GetNoCycle(int id)
+        {
+            T returned = default(T);
+
+            using (MySqlConnection conn = this.GetConnection())
+            {
+                conn.Open();
+                using (MySqlCommand command = new MySqlCommand(_getSqlId.Replace("%d", id.ToString()), conn))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                            returned = GetObjectFromReader(reader);
+                    }
+                }
+                conn.Close();
+            }
+
+            return returned;
+        }
+
     }
 }

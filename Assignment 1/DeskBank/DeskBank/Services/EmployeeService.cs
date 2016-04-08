@@ -47,9 +47,12 @@ namespace DeskBank
             return ClientAccount.Gateway.Get(p);
         }
 
-        internal void SaveClientAccountInfo(AccountType accountType, int p, DateTime dateTime)
+        internal void SaveClientAccountInfo(int id, AccountType accountType, DateTime dateTime)
         {
-            ClientAccount.Gateway.Add(new ClientAccount() { CreatedOn = dateTime, Type = accountType, MoneyAmount = p });
+            if (ClientAccount.Gateway.Get(id) == null)
+                ClientAccount.Gateway.Add(new ClientAccount() { CreatedOn = dateTime, Type = accountType, MoneyAmount = 0 });
+            else
+                ClientAccount.Gateway.Update(id, new ClientAccount() { Type = accountType, CreatedOn = dateTime });
         }
 
         internal void DeleteClientInfo(int p)
@@ -62,6 +65,15 @@ namespace DeskBank
             var fromClientAccount = ClientAccount.Gateway.Get(from);
             var toClientAccount = ClientAccount.Gateway.Get(to);
 
+            if (fromClientAccount == null)
+            {
+                throw new Exception("From account not found!");
+            }
+            if (toClientAccount == null)
+            {
+                throw new Exception("To account not found!");
+            }
+
             if (amount > fromClientAccount.MoneyAmount)
                 throw new Exception("Insufficent Funds");
 
@@ -72,10 +84,9 @@ namespace DeskBank
             ClientAccount.Gateway.Update(toClientAccount.Id, toClientAccount);
         }
 
-        internal string SearchTransferAccount(int accountFrom, int accountTo)
+        internal string SearchTransferAccount(int accountTo)
         {
-            //returns name of to owner
-            return "nu e clar ce se intampla aici?";
+            return Client.Gateway.Get(accountTo).Name;
         }
 
         internal bool CompanyExists(int p)
@@ -111,6 +122,16 @@ namespace DeskBank
         internal void SaveEmployeeInfo(int p1, string p2, string p3, EmployeeType employeeType)
         {
             throw new NotImplementedException();
+        }
+
+        internal object[] GetClientsPNC()
+        {
+            return Client.Gateway.GetAll().Select(e => (object)e.PNC).ToArray();
+        }
+
+        internal object[] GetClientAccountsForPNC(int selectedValue)
+        {
+            return Client.Gateway.Get(selectedValue).Accounts.Select(e => (object)e).ToArray();
         }
     }
 }
