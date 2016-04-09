@@ -134,7 +134,6 @@
             this.adminEmployeeSearchButton.TabIndex = 3;
             this.adminEmployeeSearchButton.Text = "Search";
             this.adminEmployeeSearchButton.UseVisualStyleBackColor = true;
-            this.adminEmployeeSearchButton.Click += new System.EventHandler(this.adminEmployeeSearchButtonClick);
             // 
             // groupBox1
             // 
@@ -248,7 +247,6 @@
             this.adminEmployeeGetActivitiesButton.TabIndex = 1;
             this.adminEmployeeGetActivitiesButton.Text = "Get Activities";
             this.adminEmployeeGetActivitiesButton.UseVisualStyleBackColor = true;
-            this.adminEmployeeGetActivitiesButton.Click += new System.EventHandler(this.adminEmployeeGetActivitiesButtonClick);
             // 
             // adminEmployeeSaveInformationButton
             // 
@@ -258,7 +256,6 @@
             this.adminEmployeeSaveInformationButton.TabIndex = 0;
             this.adminEmployeeSaveInformationButton.Text = "Save Employee Info";
             this.adminEmployeeSaveInformationButton.UseVisualStyleBackColor = true;
-            this.adminEmployeeSaveInformationButton.Click += new System.EventHandler(this.adminEmployeeSaveInformationButtonClick);
             // 
             // groupBox3
             // 

@@ -75,6 +75,7 @@
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Aspects\OnExceptionMessage.cs" />
+    <Compile Include="Exceptions\GatewayException.cs" />
     <Compile Include="EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,27 +84,29 @@
     </Compile>
     <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\AuthorizationService.cs" />
-    <Compile Include="Domain\AccountType.cs" />
+    <Compile Include="Domain\Enums\AccountType.cs" />
     <Compile Include="Domain\ClientAccount.cs" />
     <Compile Include="Domain\Client.cs" />
     <Compile Include="Domain\Employee.cs" />
     <Compile Include="Domain\EmployeeActivity.cs" />
-    <Compile Include="Gateways\EmployeeActivityGateway.cs" />
-    <Compile Include="Domain\EmployeeActivityType.cs" />
-    <Compile Include="Gateways\EmployeeGateway.cs" />
-    <Compile Include="Domain\EmployeeType.cs" />
-    <Compile Include="Gateways\ClientGateway.cs" />
-    <Compile Include="Gateways\ClientAccountGateway.cs" />
+    <Compile Include="Domain\Gateways\EmployeeActivityGateway.cs" />
+    <Compile Include="Domain\Enums\EmployeeActivityType.cs" />
+    <Compile Include="Domain\Gateways\EmployeeGateway.cs" />
+    <Compile Include="Domain\Enums\EmployeeType.cs" />
+    <Compile Include="Domain\Gateways\ClientGateway.cs" />
+    <Compile Include="Domain\Gateways\ClientAccountGateway.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gateways\Gateway.cs" />
-    <Compile Include="Gateways\IIdentifiable.cs" />
+    <Compile Include="Domain\Gateways\Generic\Gateway.cs" />
+    <Compile Include="Domain\IIdentifiable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Exceptions\UnauthorizedException.cs" />
+    <Compile Include="Exceptions\InsufficientFundsException.cs" />
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>

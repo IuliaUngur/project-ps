@@ -12,14 +12,18 @@ namespace DeskBank.Domain
         public ClientAccountGateway() : base("client_accounts") { }
         protected override string GetValuesString(ClientAccount value)
         {
-            return value.Id + "," + Convert.ToInt32(value.Type) + "," + value.MoneyAmount + ",'" + value.CreatedOn.ToString("yyyy-MM-dd H:mm:ss") +"'";
+            return value.Id + "," + 
+                   Convert.ToInt32(value.Type) + "," + 
+                   value.MoneyAmount + ",'" + 
+                   value.CreatedOn.ToString("yyyy-MM-dd H:mm:ss") + "'," +
+                   value.OwnerPNC ;
         }
 
         protected override string GetUpdateString(ClientAccount value)
         {
             string returned = "";
             returned += "type = " + Convert.ToInt32(value.Type) + ",";
-            returned += "money_amount = " + value.MoneyAmount + ",";
+            returned += "money_amount = " + value.MoneyAmount + "," ;
             returned += "created_on = '" + value.CreatedOn.ToString("yyyy-MM-dd H:mm:ss") + "'";
             return returned;
         }
@@ -31,14 +35,8 @@ namespace DeskBank.Domain
                 Type = (AccountType)reader.GetInt32(1),
                 MoneyAmount = reader.GetInt32(2),
                 CreatedOn = reader.GetDateTime(3),
-                Owner = _GetOwner(reader.GetInt32(0))
+                OwnerPNC = reader.GetInt32(4)
             };
         }
-
-        private Client _GetOwner(int p)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }

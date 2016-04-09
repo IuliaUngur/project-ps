@@ -40,7 +40,8 @@
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
-            this.userNameLabel.Location = new System.Drawing.Point(3, 0);
+            this.userNameLabel.Location = new System.Drawing.Point(15, 15);
+            this.userNameLabel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.userNameLabel.Name = "userNameLabel";
             this.userNameLabel.Size = new System.Drawing.Size(60, 13);
             this.userNameLabel.TabIndex = 0;
@@ -48,14 +49,16 @@
             // 
             // userNameTextBox
             // 
-            this.userNameTextBox.Location = new System.Drawing.Point(3, 16);
+            this.userNameTextBox.Location = new System.Drawing.Point(15, 38);
+            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.userNameTextBox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(3, 55);
+            this.passwordTextBox.Location = new System.Drawing.Point(15, 91);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
             this.passwordTextBox.TabIndex = 3;
@@ -63,7 +66,8 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(3, 39);
+            this.passwordLabel.Location = new System.Drawing.Point(15, 68);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(53, 13);
             this.passwordLabel.TabIndex = 2;
@@ -71,7 +75,8 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(3, 81);
+            this.loginButton.Location = new System.Drawing.Point(15, 121);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(75, 23);
             this.loginButton.TabIndex = 4;
@@ -90,6 +95,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(15);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(284, 261);
             this.flowLayoutPanel1.TabIndex = 5;
             // 

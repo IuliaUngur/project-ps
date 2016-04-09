@@ -1,13 +1,15 @@
 ﻿using DeskBank.Domain;
+using DeskBank.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DeskBank
+namespace DeskBank.Services
 {
     public class EmployeeService
     {
+
         private Employee currentEmployee;
         public EmployeeService(Employee e)
         {
@@ -16,122 +18,138 @@ namespace DeskBank
 
         internal bool IsAdmin()
         {
-           return currentEmployee.Type == EmployeeType.Admin ? true : false;
-        }
-
-        internal Client SearchClientInfo(int p)
-        {
-            return Client.Gateway.GetAll().Find(e=>e.PNC ==p);
-        }
-
-        internal void SaveClientInfo(string clientName, int clientPNC, string clientAddress)
-        {
-            Client c = Client.Gateway.GetAll().Find(e => e.PNC == clientPNC);
-            if (c == null)
-                Client.Gateway.Add(new Client()
-                {
-                    Name = clientName,
-                    PNC = clientPNC,
-                    Address = clientAddress
-                });
-            else
-            {
-                c.Name = clientName;
-                c.Address = clientAddress;
-                Client.Gateway.Update(c.Id, c);
-            }
-        }
-
-        internal ClientAccount SearchAccountInfo(int p)
-        {
-            return ClientAccount.Gateway.Get(p);
-        }
-
-        internal void SaveClientAccountInfo(int id, AccountType accountType, DateTime dateTime)
-        {
-            if (ClientAccount.Gateway.Get(id) == null)
-                ClientAccount.Gateway.Add(new ClientAccount() { CreatedOn = dateTime, Type = accountType, MoneyAmount = 0 });
-            else
-                ClientAccount.Gateway.Update(id, new ClientAccount() { Type = accountType, CreatedOn = dateTime });
-        }
-
-        internal void DeleteClientInfo(int p)
-        {
-            ClientAccount.Gateway.Remove(p);
-        }
-
-        internal void TransferMoney(int from, int to, int amount)
-        {
-            var fromClientAccount = ClientAccount.Gateway.Get(from);
-            var toClientAccount = ClientAccount.Gateway.Get(to);
-
-            if (fromClientAccount == null)
-            {
-                throw new Exception("From account not found!");
-            }
-            if (toClientAccount == null)
-            {
-                throw new Exception("To account not found!");
-            }
-
-            if (amount > fromClientAccount.MoneyAmount)
-                throw new Exception("Insufficent Funds");
-
-            fromClientAccount.MoneyAmount -= amount;
-            toClientAccount.MoneyAmount += amount;
-
-            ClientAccount.Gateway.Update(fromClientAccount.Id, fromClientAccount);
-            ClientAccount.Gateway.Update(toClientAccount.Id, toClientAccount);
-        }
-
-        internal string SearchTransferAccount(int accountTo)
-        {
-            return Client.Gateway.Get(accountTo).Name;
-        }
-
-        internal bool CompanyExists(int p)
-        {
-            return Client.Gateway.Get(p) != null;
-        }
-
-        //needs rethinking
-        internal void PayCompanyCash(int companyID, int clientID, int amount)
-        {
-            var comp = ClientAccount.Gateway.Get(companyID);
-            var client = ClientAccount.Gateway.Get(clientID);
-
-            if (client == null)
-                throw new Exception("Client not found");
-
-            if (comp == null)
-                throw new Exception("Company not found");
-
-            comp.MoneyAmount += amount;
-        }
-
-        internal void PayCompanyFromAccount(int p1, int p2, int p3, int p4)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal Employee SearchEmployee(int p)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void SaveEmployeeInfo(int p1, string p2, string p3, EmployeeType employeeType)
-        {
-            throw new NotImplementedException();
+            return currentEmployee.Type == EmployeeType.Admin ? true : false;
         }
 
         internal object[] GetClientsPNC()
         {
-            return Client.Gateway.GetAll().Select(e => (object)e.PNC).ToArray();
+            return Client.Gateway.GetAll().Select(el => (object)el.PNC).ToArray();
         }
 
-        internal object[] GetClientAccountsForPNC(int selectedValue)
+
+        internal object[] GetClientAccountIDsForPNC(int selectedPNC)
         {
-            return Client.Gateway.Get(selectedValue).Accounts.Select(e => (object)e).ToArray();
+            return ClientAccount.Gateway.GetAll().Where(el => el.OwnerPNC == selectedPNC).
+                Select(el => (object)el.Id).ToArray();
+        }
+
+        internal string GetClientNameForPNC(int selectedPNC)
+        {
+            return Client.Gateway.GetAll().Where(el => el.PNC == selectedPNC).
+                First().Name;
+        }
+
+        internal string GetClientAddressForPNC(int selectedPNC)
+        {
+            return Client.Gateway.GetAll().Where(el => el.PNC == selectedPNC).
+                First().Address;
+        }
+
+        internal void UpdateClientNameAndAddressForPNC(int selectedPNC, string name, string address)
+        {
+            int id = Client.Gateway.GetAll().Where(el => el.PNC == selectedPNC).First().Id;
+            Client c = new Client()
+            {
+                Name = name,
+                Address = address
+            };
+            Client.Gateway.Update(id, c);
+        }
+
+        internal void SaveNewClient(int newPNC, string newName, string newAddress)
+        {
+            Client.Gateway.Add(
+                new Client()
+                {
+                    Name = newName,
+                    PNC = newPNC,
+                    Address = newAddress
+                }
+            );
+        }
+
+        internal string GetClientAccountMoneyAmount(int selectedAccountID)
+        {
+            return ClientAccount.Gateway.Get(selectedAccountID).MoneyAmount.ToString();
+        }
+
+        internal int GetClientAccountType(int selectedAccountID)
+        {
+            return Convert.ToInt32(ClientAccount.Gateway.Get(selectedAccountID).Type);
+        }
+
+        internal DateTime GetClientAccountCreatedOn(int selectedAccountID)
+        {
+            return ClientAccount.Gateway.Get(selectedAccountID).CreatedOn;
+        }
+
+        internal void UpdateClientAccountMoneyAmmountCreatedOnAndType(int accountId, float moneyAmount, DateTime createdOn, int type)
+        {
+            ClientAccount.Gateway.Update(accountId, new ClientAccount()
+            {
+                MoneyAmount = moneyAmount,
+                Type = (AccountType)type,
+                CreatedOn = createdOn
+            });
+        }
+
+        internal void DeleteClientAccount(int p)
+        {
+            ClientAccount.Gateway.Remove(p);
+        }
+
+        internal void SaveNewClientAccount(int newPNC, int newType, DateTime newCreatedOn)
+        {
+            ClientAccount.Gateway.Add(new ClientAccount() { 
+                OwnerPNC = newPNC, 
+                Type = (AccountType)newType,
+                CreatedOn = newCreatedOn, 
+                MoneyAmount = 0 
+            });
+        }
+
+        internal void TransferMoney(int fromAccountId, int toAccountId, int amount)
+        {
+            var from = ClientAccount.Gateway.Get(fromAccountId);
+            var to = ClientAccount.Gateway.Get(toAccountId);
+
+            if (from.MoneyAmount < amount)
+            {
+                throw new InsufficientFundsException("Insuficient funds exeption");
+            }
+
+            from.MoneyAmount -= amount;
+            to.MoneyAmount += amount;
+
+            ClientAccount.Gateway.Update(fromAccountId, from);
+            ClientAccount.Gateway.Update(toAccountId, to);
+        }
+
+        internal void ProcessBillAddCash(int fromAccountId, int toAccountId, int amount, string billId)
+        {
+            // TODO update the employee activity with the corect description
+            var to = ClientAccount.Gateway.Get(toAccountId);
+
+            to.MoneyAmount += amount;
+            ClientAccount.Gateway.Update(toAccountId, to);
+        }
+
+        internal void ProcessBill(int fromAccountId, int toAccountId, int amount, string billId)
+        {
+            // TODO update the employee activity with the corect description
+            var from = ClientAccount.Gateway.Get(fromAccountId);
+            var to = ClientAccount.Gateway.Get(toAccountId);
+
+            if (from.MoneyAmount < amount)
+            {
+                throw new InsufficientFundsException("Insuficient funds exeption");
+            }
+
+            from.MoneyAmount -= amount;
+            to.MoneyAmount += amount;
+
+            ClientAccount.Gateway.Update(fromAccountId, from);
+            ClientAccount.Gateway.Update(toAccountId, to);
         }
     }
 }

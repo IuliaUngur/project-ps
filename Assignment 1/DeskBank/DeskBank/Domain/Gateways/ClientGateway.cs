@@ -12,15 +12,16 @@ namespace DeskBank.Domain
         public ClientGateway() : base("clients") { }
         protected override string GetValuesString(Client value)
         {
-            return value.Id + ",'" +value.Name + "'," +value.PNC + ",'" +value.Address +"'";
+            return value.Id + ",'" +
+                   value.Name + "'," +
+                   value.PNC + ",'" +
+                   value.Address + "'";
         }
 
         protected override string GetUpdateString(Client value)
         {
             string returned ="";
-            returned += "id = " + value.Id + ",";
             returned += "name = '" + value.Name + "',";
-            returned += "cnp = " + value.PNC + ",";
             returned += "address = '" + value.Address + "'";
             return returned;
         }
@@ -30,14 +31,8 @@ namespace DeskBank.Domain
                 Id = reader.GetInt32(0),
                 Name = reader.GetString(1),
                 PNC = reader.GetInt32(2),
-                Address = reader.GetString(3),
-                Accounts = _GetAccounts(reader.GetInt32(0))
+                Address = reader.GetString(3)
             };
-        }
-
-        private IEnumerable<ClientAccount> _GetAccounts(int ownerId)
-        {
-            return ClientAccount.Gateway.GetAll().Where(elem => elem.Owner.Id == ownerId);
         }
     }
 }

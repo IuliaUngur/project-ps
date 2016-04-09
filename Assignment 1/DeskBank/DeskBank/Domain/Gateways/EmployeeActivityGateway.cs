@@ -12,7 +12,11 @@ namespace DeskBank.Domain
         public EmployeeActivityGateway() : base("employee_activities") { }
         protected override string GetValuesString(EmployeeActivity value)
         {
-            return value.Id + "," + Convert.ToInt32(value.Type) + ",'" + value.Date.ToString("yyyy-MM-dd H:mm:ss") + "'," + value.EmployeeId + ",'" + value.Description + "'";
+            return value.Id + "," + 
+                   Convert.ToInt32(value.Type) + ",'" + 
+                   value.Date.ToString("yyyy-MM-dd H:mm:ss") + "'," + 
+                   value.EmployeeId + ",'" + 
+                   value.Description + "'";
         }
 
         protected override string GetUpdateString(EmployeeActivity value)

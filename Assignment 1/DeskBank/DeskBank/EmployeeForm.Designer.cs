@@ -555,7 +555,13 @@
             // 
             // accountSelectedTypeComboBox
             // 
+            this.accountSelectedTypeComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "SavingsAccount",
+            "CheckingAccount"});
             this.accountSelectedTypeComboBox.FormattingEnabled = true;
+            this.accountSelectedTypeComboBox.Items.AddRange(new object[] {
+            "SavingsAccount,",
+            "CheckingAccount"});
             this.accountSelectedTypeComboBox.Location = new System.Drawing.Point(0, 76);
             this.accountSelectedTypeComboBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.accountSelectedTypeComboBox.Name = "accountSelectedTypeComboBox";
@@ -671,7 +677,13 @@
             // 
             // accountNewTypeComboBox
             // 
+            this.accountNewTypeComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "SavingsAccount",
+            "CheckingAccount"});
             this.accountNewTypeComboBox.FormattingEnabled = true;
+            this.accountNewTypeComboBox.Items.AddRange(new object[] {
+            "SavingsAccount,",
+            "CheckingAccount"});
             this.accountNewTypeComboBox.Location = new System.Drawing.Point(0, 77);
             this.accountNewTypeComboBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.accountNewTypeComboBox.Name = "accountNewTypeComboBox";

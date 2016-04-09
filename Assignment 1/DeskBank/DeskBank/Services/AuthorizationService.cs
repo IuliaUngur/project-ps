@@ -3,8 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DeskBank.Exceptions;
 
-namespace DeskBank
+namespace DeskBank.Services
 {
     class AuthorizationService
     {
@@ -16,7 +17,7 @@ namespace DeskBank
             );
             if (emp == null)
             {
-                throw new Exception("User not registered");
+                throw new UnauthorizedException("User not registered");
             }
             return emp;
         }

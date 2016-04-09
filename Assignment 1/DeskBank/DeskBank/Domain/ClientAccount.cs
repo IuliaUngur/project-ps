@@ -14,7 +14,7 @@ namespace DeskBank
         public AccountType Type { get; set; }
         public float MoneyAmount { get; set; }
         public DateTime CreatedOn { get; set; }
-        public Client Owner { get; set; }
+        public int OwnerPNC { get; set; }
 
         public static ClientAccountGateway Gateway { get; set; }
     }

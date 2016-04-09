@@ -13,7 +13,10 @@ namespace DeskBank.Domain
 
         protected override string GetValuesString(Employee value)
         {
-            return value.Id + ",'" + value.UserName + "','" + value.Password + "'," + value.Type;
+            return value.Id + ",'" + 
+                   value.UserName + "','" + 
+                   value.Password + "'," + 
+                   value.Type;
         }
 
         protected override string GetUpdateString(Employee value)
@@ -32,15 +35,8 @@ namespace DeskBank.Domain
                 Id = reader.GetInt32(0),
                 UserName = reader.GetString(1),
                 Password = reader.GetString(2),
-                Type = (EmployeeType)reader.GetInt32(3),
-                Activities = _GetActivities(reader.GetInt32(0))
+                Type = (EmployeeType)reader.GetInt32(3)
             };
         }
-
-        private List<EmployeeActivity> _GetActivities(int p)
-        {
-            return EmployeeActivity.Gateway.GetAll().Where(e=> e.EmployeeId==p).ToList();
-        }
-
     }
 }

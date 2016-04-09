@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DeskBank.Aspects
 {
     [Serializable]
-    public class OnExceptionMessage : OnMethodBoundaryAspect
+    public class OnExceptionMessage : OnExceptionAspect 
     {
         private Dictionary<Type, string> messages;
 
@@ -20,13 +20,17 @@ namespace DeskBank.Aspects
 
         public override void OnException(MethodExecutionArgs args)
         {
+            bool wasCatched = false;
             foreach (var message in messages)
             {
-                if (args.Exception.GetType() == message.GetType())
+                if (args.Exception.GetType() == message.Key)
                 {
+                    wasCatched = true;
                     System.Windows.Forms.MessageBox.Show(message.Value);
                 }
             }
+            if(wasCatched)
+                args.FlowBehavior = FlowBehavior.Return;
         }
     }
 

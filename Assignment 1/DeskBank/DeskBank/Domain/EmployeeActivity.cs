@@ -11,23 +11,9 @@ namespace DeskBank.Domain
         public int Id { get; set; }
         public EmployeeActivityType Type { get; set; }
         public DateTime Date { get; set; }
+        public int EmployeeId { get; set; }
         public string Description { get; set; }
         
         public static EmployeeActivityGateway Gateway { get; set; }
-        
-        public Employee Employee
-        {
-            get
-            {
-                return Employee.Gateway.Get(this.EmployeeId);
-            }
-            set
-            {
-                Employee.Gateway.Update(this.EmployeeId, value);
-            }
-        }
-
-        public int EmployeeId { get; set; }
-
     }
 }
