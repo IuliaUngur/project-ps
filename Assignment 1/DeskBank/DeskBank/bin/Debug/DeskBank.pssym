@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Symbols LinesOfCode="1702" PostSharpLinesOfCode="0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+<Symbols LinesOfCode="1755" PostSharpLinesOfCode="0" xmlns="http://schemas.postsharp.org/2.0/symbols">
   <Class Class="#1=T:[DeskBank]DeskBank.Aspects.OnExceptionMessage">
-    <Instance Declaration="#2=T:[DeskBank]DeskBank.EmployeeForm" Id="60e8f337cfb04078">
+    <Instance Declaration="#2=T:[DeskBank]DeskBank.EmployeeForm" Id="60e8f337a282b82d">
       <Target Target="#3=M:[DeskBank]DeskBank.EmployeeForm::#ctor([DeskBank]DeskBank.Services.EmployeeService)">
         <JoinPoint Description="#4=Wrapped by advice(s) OnException" />
       </Target>
@@ -38,18 +38,21 @@
       <Target Target="#15=M:[DeskBank]DeskBank.EmployeeForm::ProcessBillsPayButtonClick(System.Object, System.EventArgs)">
         <JoinPoint Description="#4" Ordinal="12" />
       </Target>
-      <Target Target="#16=M:[DeskBank]DeskBank.EmployeeForm::Dispose(System.Boolean)">
+      <Target Target="#16=M:[DeskBank]DeskBank.EmployeeForm::OnClose(System.Object, System.Windows.Forms.FormClosedEventArgs)">
         <JoinPoint Description="#4" Ordinal="13" />
       </Target>
-      <Target Target="#17=M:[DeskBank]DeskBank.EmployeeForm::InitializeComponent()">
+      <Target Target="#17=M:[DeskBank]DeskBank.EmployeeForm::Dispose(System.Boolean)">
         <JoinPoint Description="#4" Ordinal="14" />
       </Target>
+      <Target Target="#18=M:[DeskBank]DeskBank.EmployeeForm::InitializeComponent()">
+        <JoinPoint Description="#4" Ordinal="15" />
+      </Target>
     </Instance>
-    <Instance Declaration="#18=M:[DeskBank]DeskBank.LoginForm::LoginButtonClick(System.Object, System.EventArgs)" Id="60e8f337ac5638bb">
+    <Instance Declaration="#19=M:[DeskBank]DeskBank.LoginForm::LoginButtonClick(System.Object, System.EventArgs)" Id="60e8f337926d3964">
       <Target>
         <JoinPoint Description="#4" Ordinal="0" />
       </Target>
     </Instance>
   </Class>
-  <Annotation Target="#19=M:[DeskBank]DeskBank.Aspects.OnExceptionMessage::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#20=2" Description="#21=PostSharp estimates that 2 line(s) of code are saved every time this advice is applied. Use the [LinesOfCodeAvoided] attribute on the aspect or specify the LinesOfCodeAvoided property on the advice attribute to override this value." />
+  <Annotation Target="#20=M:[DeskBank]DeskBank.Aspects.OnExceptionMessage::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#21=2" Description="#22=PostSharp estimates that 2 line(s) of code are saved every time this advice is applied. Use the [LinesOfCodeAvoided] attribute on the aspect or specify the LinesOfCodeAvoided property on the advice attribute to override this value." />
 </Symbols>

@@ -13,6 +13,14 @@ namespace DeskBank.Domain
         CreateClientAccount = 3,
         ViewClientAccount = 4,
         UpdateClientAccount = 5,
-        DeleteClientAccount = 6
+        DeleteClientAccount,
+        ProcessBillCash,
+        ProcessBill,
+        TransferMoney,
+        AddNewAccount,
+        AddNewClient,
+        UpdateEmployee,
+        DeleteEmployee,
+        AddEmployee
     }
 }

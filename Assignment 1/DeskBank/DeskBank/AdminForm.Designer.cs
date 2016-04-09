@@ -28,343 +28,338 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.employeeListView = new System.Windows.Forms.ListView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.adminSearchEmployeeNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.adminEmployeeSearchButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.adminEmployeeIDNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.adminSelectedUserNameTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.adminSelectedPasswordTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.adminEmployeeUserNameTextBox = new System.Windows.Forms.TextBox();
+            this.adminSelectedTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.adminUpdateSelectedEmployeeButton = new System.Windows.Forms.Button();
+            this.adminDeleteSelectedEmployeeButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.adminEmployeePasswordTextBox = new System.Windows.Forms.TextBox();
+            this.adminNewUserNameTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.adminEmployeeTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.adminEmployeeGetActivitiesButton = new System.Windows.Forms.Button();
-            this.adminEmployeeSaveInformationButton = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.adminGetEmployeeActivitiesFromDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.adminGetActivitiesToDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.adminNewPasswordTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.adminNewTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.adminSaveNewEmployeeButton = new System.Windows.Forms.Button();
+            this.employeeActivityListView = new System.Windows.Forms.ListView();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminSearchEmployeeNumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminEmployeeIDNumericUpDown)).BeginInit();
-            this.flowLayoutPanel5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.employeeListView);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer1.Size = new System.Drawing.Size(649, 339);
+            this.splitContainer1.SplitterDistance = 202;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // employeeListView
+            // 
+            this.employeeListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.employeeListView.Location = new System.Drawing.Point(0, 0);
+            this.employeeListView.Name = "employeeListView";
+            this.employeeListView.Size = new System.Drawing.Size(202, 339);
+            this.employeeListView.TabIndex = 0;
+            this.employeeListView.UseCompatibleStateImageBehavior = false;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel5);
+            this.flowLayoutPanel1.Controls.Add(this.groupBox1);
+            this.flowLayoutPanel1.Controls.Add(this.groupBox2);
+            this.flowLayoutPanel1.Controls.Add(this.employeeActivityListView);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(384, 259);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.groupBox2);
-            this.flowLayoutPanel3.Controls.Add(this.groupBox3);
-            this.flowLayoutPanel3.Controls.Add(this.groupBox1);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(374, 204);
-            this.flowLayoutPanel3.TabIndex = 4;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.flowLayoutPanel4);
-            this.groupBox2.Location = new System.Drawing.Point(3, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(217, 92);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.label2);
-            this.flowLayoutPanel4.Controls.Add(this.adminSearchEmployeeNumericUpDown);
-            this.flowLayoutPanel4.Controls.Add(this.adminEmployeeSearchButton);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(211, 73);
-            this.flowLayoutPanel4.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Search Employee";
-            // 
-            // adminSearchEmployeeNumericUpDown
-            // 
-            this.adminSearchEmployeeNumericUpDown.Location = new System.Drawing.Point(3, 16);
-            this.adminSearchEmployeeNumericUpDown.Name = "adminSearchEmployeeNumericUpDown";
-            this.adminSearchEmployeeNumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.adminSearchEmployeeNumericUpDown.TabIndex = 2;
-            // 
-            // adminEmployeeSearchButton
-            // 
-            this.adminEmployeeSearchButton.Location = new System.Drawing.Point(3, 42);
-            this.adminEmployeeSearchButton.Name = "adminEmployeeSearchButton";
-            this.adminEmployeeSearchButton.Size = new System.Drawing.Size(75, 23);
-            this.adminEmployeeSearchButton.TabIndex = 3;
-            this.adminEmployeeSearchButton.Text = "Search";
-            this.adminEmployeeSearchButton.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(15);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(443, 339);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel2);
-            this.groupBox1.Location = new System.Drawing.Point(226, 3);
+            this.groupBox1.Location = new System.Drawing.Point(18, 18);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(141, 198);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(15);
+            this.groupBox1.Size = new System.Drawing.Size(200, 228);
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Employee Information";
+            this.groupBox1.Text = "Selected Employee";
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.label1);
-            this.flowLayoutPanel2.Controls.Add(this.adminEmployeeIDNumericUpDown);
+            this.flowLayoutPanel2.Controls.Add(this.adminSelectedUserNameTextBox);
+            this.flowLayoutPanel2.Controls.Add(this.label2);
+            this.flowLayoutPanel2.Controls.Add(this.adminSelectedPasswordTextBox);
             this.flowLayoutPanel2.Controls.Add(this.label3);
-            this.flowLayoutPanel2.Controls.Add(this.adminEmployeeUserNameTextBox);
-            this.flowLayoutPanel2.Controls.Add(this.label4);
-            this.flowLayoutPanel2.Controls.Add(this.adminEmployeePasswordTextBox);
-            this.flowLayoutPanel2.Controls.Add(this.label5);
-            this.flowLayoutPanel2.Controls.Add(this.adminEmployeeTypeComboBox);
+            this.flowLayoutPanel2.Controls.Add(this.adminSelectedTypeComboBox);
+            this.flowLayoutPanel2.Controls.Add(this.adminUpdateSelectedEmployeeButton);
+            this.flowLayoutPanel2.Controls.Add(this.adminDeleteSelectedEmployeeButton);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 16);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(15, 28);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(135, 179);
-            this.flowLayoutPanel2.TabIndex = 0;
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(170, 185);
+            this.flowLayoutPanel2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Employee ID";
+            this.label1.Text = "User Name";
             // 
-            // adminEmployeeIDNumericUpDown
+            // adminSelectedUserNameTextBox
             // 
-            this.adminEmployeeIDNumericUpDown.Location = new System.Drawing.Point(3, 16);
-            this.adminEmployeeIDNumericUpDown.Name = "adminEmployeeIDNumericUpDown";
-            this.adminEmployeeIDNumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.adminEmployeeIDNumericUpDown.TabIndex = 1;
+            this.adminSelectedUserNameTextBox.Location = new System.Drawing.Point(0, 23);
+            this.adminSelectedUserNameTextBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.adminSelectedUserNameTextBox.Name = "adminSelectedUserNameTextBox";
+            this.adminSelectedUserNameTextBox.ReadOnly = true;
+            this.adminSelectedUserNameTextBox.Size = new System.Drawing.Size(170, 20);
+            this.adminSelectedUserNameTextBox.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(0, 53);
+            this.label2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Password";
+            // 
+            // adminSelectedPasswordTextBox
+            // 
+            this.adminSelectedPasswordTextBox.Location = new System.Drawing.Point(0, 76);
+            this.adminSelectedPasswordTextBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.adminSelectedPasswordTextBox.Name = "adminSelectedPasswordTextBox";
+            this.adminSelectedPasswordTextBox.Size = new System.Drawing.Size(170, 20);
+            this.adminSelectedPasswordTextBox.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 39);
+            this.label3.Location = new System.Drawing.Point(0, 106);
+            this.label3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "User Name";
+            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Type";
             // 
-            // adminEmployeeUserNameTextBox
+            // adminSelectedTypeComboBox
             // 
-            this.adminEmployeeUserNameTextBox.Location = new System.Drawing.Point(3, 55);
-            this.adminEmployeeUserNameTextBox.Name = "adminEmployeeUserNameTextBox";
-            this.adminEmployeeUserNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.adminEmployeeUserNameTextBox.TabIndex = 3;
+            this.adminSelectedTypeComboBox.FormattingEnabled = true;
+            this.adminSelectedTypeComboBox.Items.AddRange(new object[] {
+            "Admin",
+            "Regular"});
+            this.adminSelectedTypeComboBox.Location = new System.Drawing.Point(0, 129);
+            this.adminSelectedTypeComboBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.adminSelectedTypeComboBox.Name = "adminSelectedTypeComboBox";
+            this.adminSelectedTypeComboBox.Size = new System.Drawing.Size(170, 21);
+            this.adminSelectedTypeComboBox.TabIndex = 5;
+            // 
+            // adminUpdateSelectedEmployeeButton
+            // 
+            this.adminUpdateSelectedEmployeeButton.Location = new System.Drawing.Point(0, 160);
+            this.adminUpdateSelectedEmployeeButton.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.adminUpdateSelectedEmployeeButton.Name = "adminUpdateSelectedEmployeeButton";
+            this.adminUpdateSelectedEmployeeButton.Size = new System.Drawing.Size(75, 23);
+            this.adminUpdateSelectedEmployeeButton.TabIndex = 6;
+            this.adminUpdateSelectedEmployeeButton.Text = "Update";
+            this.adminUpdateSelectedEmployeeButton.UseVisualStyleBackColor = true;
+            this.adminUpdateSelectedEmployeeButton.Click += new System.EventHandler(this.AdminUpdateSelectedEmployeeButtonClick);
+            // 
+            // adminDeleteSelectedEmployeeButton
+            // 
+            this.adminDeleteSelectedEmployeeButton.Location = new System.Drawing.Point(85, 160);
+            this.adminDeleteSelectedEmployeeButton.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.adminDeleteSelectedEmployeeButton.Name = "adminDeleteSelectedEmployeeButton";
+            this.adminDeleteSelectedEmployeeButton.Size = new System.Drawing.Size(75, 23);
+            this.adminDeleteSelectedEmployeeButton.TabIndex = 7;
+            this.adminDeleteSelectedEmployeeButton.Text = "Delete";
+            this.adminDeleteSelectedEmployeeButton.UseVisualStyleBackColor = true;
+            this.adminDeleteSelectedEmployeeButton.Click += new System.EventHandler(this.AdminDeleteSelectedEmployeeButtonClick);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.flowLayoutPanel3);
+            this.groupBox2.Location = new System.Drawing.Point(224, 18);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(15);
+            this.groupBox2.Size = new System.Drawing.Size(200, 228);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "New Employee";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.label4);
+            this.flowLayoutPanel3.Controls.Add(this.adminNewUserNameTextBox);
+            this.flowLayoutPanel3.Controls.Add(this.label5);
+            this.flowLayoutPanel3.Controls.Add(this.adminNewPasswordTextBox);
+            this.flowLayoutPanel3.Controls.Add(this.label6);
+            this.flowLayoutPanel3.Controls.Add(this.adminNewTypeComboBox);
+            this.flowLayoutPanel3.Controls.Add(this.adminSaveNewEmployeeButton);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(15, 28);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(170, 185);
+            this.flowLayoutPanel3.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 78);
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Password";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "User Name";
             // 
-            // adminEmployeePasswordTextBox
+            // adminNewUserNameTextBox
             // 
-            this.adminEmployeePasswordTextBox.Location = new System.Drawing.Point(3, 94);
-            this.adminEmployeePasswordTextBox.Name = "adminEmployeePasswordTextBox";
-            this.adminEmployeePasswordTextBox.Size = new System.Drawing.Size(100, 20);
-            this.adminEmployeePasswordTextBox.TabIndex = 5;
+            this.adminNewUserNameTextBox.Location = new System.Drawing.Point(0, 23);
+            this.adminNewUserNameTextBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.adminNewUserNameTextBox.Name = "adminNewUserNameTextBox";
+            this.adminNewUserNameTextBox.Size = new System.Drawing.Size(170, 20);
+            this.adminNewUserNameTextBox.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 117);
+            this.label5.Location = new System.Drawing.Point(0, 53);
+            this.label5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Type";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Password";
             // 
-            // adminEmployeeTypeComboBox
+            // adminNewPasswordTextBox
             // 
-            this.adminEmployeeTypeComboBox.FormattingEnabled = true;
-            this.adminEmployeeTypeComboBox.Items.AddRange(new object[] {
-            "Admin",
-            "Regular"});
-            this.adminEmployeeTypeComboBox.Location = new System.Drawing.Point(3, 133);
-            this.adminEmployeeTypeComboBox.Name = "adminEmployeeTypeComboBox";
-            this.adminEmployeeTypeComboBox.Size = new System.Drawing.Size(121, 21);
-            this.adminEmployeeTypeComboBox.TabIndex = 7;
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.Controls.Add(this.adminEmployeeGetActivitiesButton);
-            this.flowLayoutPanel5.Controls.Add(this.adminEmployeeSaveInformationButton);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 213);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(374, 36);
-            this.flowLayoutPanel5.TabIndex = 5;
-            // 
-            // adminEmployeeGetActivitiesButton
-            // 
-            this.adminEmployeeGetActivitiesButton.Location = new System.Drawing.Point(3, 3);
-            this.adminEmployeeGetActivitiesButton.Name = "adminEmployeeGetActivitiesButton";
-            this.adminEmployeeGetActivitiesButton.Size = new System.Drawing.Size(112, 23);
-            this.adminEmployeeGetActivitiesButton.TabIndex = 1;
-            this.adminEmployeeGetActivitiesButton.Text = "Get Activities";
-            this.adminEmployeeGetActivitiesButton.UseVisualStyleBackColor = true;
-            // 
-            // adminEmployeeSaveInformationButton
-            // 
-            this.adminEmployeeSaveInformationButton.Location = new System.Drawing.Point(121, 3);
-            this.adminEmployeeSaveInformationButton.Name = "adminEmployeeSaveInformationButton";
-            this.adminEmployeeSaveInformationButton.Size = new System.Drawing.Size(141, 23);
-            this.adminEmployeeSaveInformationButton.TabIndex = 0;
-            this.adminEmployeeSaveInformationButton.Text = "Save Employee Info";
-            this.adminEmployeeSaveInformationButton.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.flowLayoutPanel6);
-            this.groupBox3.Location = new System.Drawing.Point(3, 101);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(217, 100);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
-            // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.Controls.Add(this.label7);
-            this.flowLayoutPanel6.Controls.Add(this.adminGetEmployeeActivitiesFromDatePicker);
-            this.flowLayoutPanel6.Controls.Add(this.label6);
-            this.flowLayoutPanel6.Controls.Add(this.adminGetActivitiesToDatePicker);
-            this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(211, 81);
-            this.flowLayoutPanel6.TabIndex = 0;
-            // 
-            // adminGetEmployeeActivitiesFromDatePicker
-            // 
-            this.adminGetEmployeeActivitiesFromDatePicker.Location = new System.Drawing.Point(3, 16);
-            this.adminGetEmployeeActivitiesFromDatePicker.Name = "adminGetEmployeeActivitiesFromDatePicker";
-            this.adminGetEmployeeActivitiesFromDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.adminGetEmployeeActivitiesFromDatePicker.TabIndex = 0;
-            // 
-            // adminGetActivitiesToDatePicker
-            // 
-            this.adminGetActivitiesToDatePicker.Location = new System.Drawing.Point(3, 55);
-            this.adminGetActivitiesToDatePicker.Name = "adminGetActivitiesToDatePicker";
-            this.adminGetActivitiesToDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.adminGetActivitiesToDatePicker.TabIndex = 1;
+            this.adminNewPasswordTextBox.Location = new System.Drawing.Point(0, 76);
+            this.adminNewPasswordTextBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.adminNewPasswordTextBox.Name = "adminNewPasswordTextBox";
+            this.adminNewPasswordTextBox.Size = new System.Drawing.Size(170, 20);
+            this.adminNewPasswordTextBox.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 39);
+            this.label6.Location = new System.Drawing.Point(0, 106);
+            this.label6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "To Date";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Type";
             // 
-            // label7
+            // adminNewTypeComboBox
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "From Date";
+            this.adminNewTypeComboBox.FormattingEnabled = true;
+            this.adminNewTypeComboBox.Items.AddRange(new object[] {
+            "Admin",
+            "Regular"});
+            this.adminNewTypeComboBox.Location = new System.Drawing.Point(0, 129);
+            this.adminNewTypeComboBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.adminNewTypeComboBox.Name = "adminNewTypeComboBox";
+            this.adminNewTypeComboBox.Size = new System.Drawing.Size(170, 21);
+            this.adminNewTypeComboBox.TabIndex = 11;
+            // 
+            // adminSaveNewEmployeeButton
+            // 
+            this.adminSaveNewEmployeeButton.Location = new System.Drawing.Point(0, 160);
+            this.adminSaveNewEmployeeButton.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.adminSaveNewEmployeeButton.Name = "adminSaveNewEmployeeButton";
+            this.adminSaveNewEmployeeButton.Size = new System.Drawing.Size(75, 23);
+            this.adminSaveNewEmployeeButton.TabIndex = 12;
+            this.adminSaveNewEmployeeButton.Text = "Save";
+            this.adminSaveNewEmployeeButton.UseVisualStyleBackColor = true;
+            this.adminSaveNewEmployeeButton.Click += new System.EventHandler(this.AdminSaveNewEmployeeButtonClick);
+            // 
+            // employeeActivityListView
+            // 
+            this.employeeActivityListView.Location = new System.Drawing.Point(18, 252);
+            this.employeeActivityListView.Name = "employeeActivityListView";
+            this.employeeActivityListView.Size = new System.Drawing.Size(406, 75);
+            this.employeeActivityListView.TabIndex = 4;
+            this.employeeActivityListView.UseCompatibleStateImageBehavior = false;
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 259);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(649, 339);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "AdminForm";
-            this.Text = "AdminForm";
+            this.Text = "Admin Form";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnClose);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminSearchEmployeeNumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminEmployeeIDNumericUpDown)).EndInit();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.flowLayoutPanel6.ResumeLayout(false);
-            this.flowLayoutPanel6.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ListView employeeListView;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown adminSearchEmployeeNumericUpDown;
-        private System.Windows.Forms.Button adminEmployeeSearchButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown adminEmployeeIDNumericUpDown;
+        private System.Windows.Forms.TextBox adminSelectedUserNameTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox adminSelectedPasswordTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox adminEmployeeUserNameTextBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox adminEmployeePasswordTextBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox adminEmployeeTypeComboBox;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.ComboBox adminSelectedTypeComboBox;
+        private System.Windows.Forms.Button adminUpdateSelectedEmployeeButton;
+        private System.Windows.Forms.Button adminDeleteSelectedEmployeeButton;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.Button adminEmployeeGetActivitiesButton;
-        private System.Windows.Forms.Button adminEmployeeSaveInformationButton;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker adminGetEmployeeActivitiesFromDatePicker;
-        private System.Windows.Forms.DateTimePicker adminGetActivitiesToDatePicker;
+        private System.Windows.Forms.ListView employeeActivityListView;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox adminNewUserNameTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox adminNewPasswordTextBox;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox adminNewTypeComboBox;
+        private System.Windows.Forms.Button adminSaveNewEmployeeButton;
+
     }
 }

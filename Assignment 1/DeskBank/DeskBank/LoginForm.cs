@@ -48,7 +48,7 @@ namespace DeskBank
             if (authorizedForm != null)
             {
                 authorizedForm.Show();
-                this.Hide();
+                this.Hide(); 
             }
         }
 

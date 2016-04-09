@@ -16,14 +16,12 @@ namespace DeskBank.Domain
             return value.Id + ",'" + 
                    value.UserName + "','" + 
                    value.Password + "'," + 
-                   value.Type;
+                   Convert.ToInt32(value.Type);
         }
 
         protected override string GetUpdateString(Employee value)
         {
             string returned = "";
-            returned += "id = " + value.Id + ",";
-            returned += "user_name = '" + value.UserName + "',";
             returned += "password = '" + value.Password + "',";
             returned += "type = " + Convert.ToInt32(value.Type);
             return returned;

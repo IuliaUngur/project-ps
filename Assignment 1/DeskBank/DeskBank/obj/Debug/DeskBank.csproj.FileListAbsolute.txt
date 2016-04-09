@@ -24,3 +24,18 @@ C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\bin\De
 C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\PostSharp.xml
 C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\DeskBank.pssym
 C:\Users\Dan\Desktop\New folder\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.exe.postsharp
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\DeskBank.exe.config
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.exe
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.pdb
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\PostSharp.dll
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\PostSharp.xml
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.AdminForm.resources
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.EmployeeForm.resources
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.LoginForm.resources
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.Properties.Resources.resources
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.csproj.GenerateResource.Cache
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\DeskBank.exe
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\DeskBank.pdb
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\bin\Debug\DeskBank.pssym
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.exe.postsharp
+D:\Git\project-ps\Assignment 1\DeskBank\DeskBank\obj\Debug\DeskBank.csprojResolveAssemblyReference.cache

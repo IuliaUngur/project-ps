@@ -36,8 +36,8 @@ namespace DeskBank.Domain
                 Id = reader.GetInt32(0),
                 Type = (EmployeeActivityType)reader.GetInt32(1),
                 Date = reader.GetDateTime(2),
-                EmployeeId = reader.GetInt32(4),
-                Description = reader.GetString(5)
+                EmployeeId = reader.GetInt32(3),
+                Description = reader.GetString(4)
             };
         }
     }

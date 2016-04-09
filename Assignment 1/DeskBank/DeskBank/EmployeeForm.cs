@@ -201,5 +201,10 @@ namespace DeskBank
                 );
             }
         }
+
+        private void OnClose(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
